@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<form name="myForm">
+<input id=userN type="text" name="userName">
+<input type="button" value="Нажмите" onclick="say();">
+<input type="reset">
+</form>
+
+<script>
+
+function say () {
+let s = myForm.userName.value;
+myForm.userName.value = `Вы ввели: ${s}`
+//let s = userN.value;
+ //   alert(s);
+
+}
+
+</script>
+
+</body>
+</html>
