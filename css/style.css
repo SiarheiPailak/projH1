@@ -1,6 +1,6 @@
-body, header, main, .wrap1, .promo, .disc, .name, .forPrice, .forPromoPrice {
+/* body, header, main, .wrap1, .promo, .disc, .name, .forPrice, .forPromoPrice {
     border: 1px solid blue;
-}
+} */
 
 h1, p {font-size:9.5vw;
     font-family: 'Oswald';
