@@ -1,0 +1,91 @@
+body, header, main, .wrap1, .promo, .disc, .name, .forPrice, .forPromoPrice {
+    border: 1px solid blue;
+}
+
+h1, p {font-size:9.5vw;
+    font-family: 'Oswald';
+    font-weight: 500;
+    margin: 0;
+   }
+
+body{
+    width: 93vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header{
+    background: url('../images/image.png') no-repeat; 
+    background-size: cover;
+    width: 93vw;
+    height: 145vw;
+    margin-top: 5vw;  
+}
+
+.disc{
+    width: 34.5vw;
+    position: absolute; 
+    top: 52vw; 
+    left: 33vw; 
+    z-index: 5;
+}
+
+.promo{
+    width: 38vw;
+    position: absolute; 
+    top: 116vw; 
+    left: 4vw;
+    z-index: 4;
+}
+
+main{width: 93vw;
+    height: 55vw;}
+
+.name {width: 93vw;
+    height: 25vw;
+}
+
+.textName{
+    color: rgb(97, 97, 97);
+    line-height: 1.1;
+    text-align: center;
+    z-index: 4;
+    padding-top: 2vw;   
+}
+
+.wrap1{
+    width: 93vw;
+    height: 15vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+.forPrice{
+    width: 50vw;
+    height: 15vw;
+}
+
+.forPromoPrice{
+    width: 43vw;
+    height: 15vw;
+}
+
+.textPrice{  
+    text-align: right;    
+    color: black;
+}
+
+.textPromoPrice{
+    font-size:6vw;
+    color: rgb(134, 130, 130);
+    padding-top: 4vw;
+    text-decoration: line-through;
+    padding-left: 5vw;
+}
+
+footer a{width: 93vw;
+    height: 25vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
