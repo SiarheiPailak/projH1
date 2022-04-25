@@ -18,8 +18,8 @@
     img{
         width: 30vw;
     }
-    div{margin: 1vw;
-    }
+    div{margin: 1vw;}
+
     footer div img {
     width: 94vw;   
     }
@@ -27,24 +27,11 @@
     footer div p {
     font-size: 3vw;      ;
     }
-
 </style>
 
 </head>
 <body>
 <section id="box">
-<div id="box1">
-        <img src="images/mir.jpg" alt="">
-        <p id="id11" fontSize = "20em">Мир</p>
-    </div>
-    <div id="box2">
-        <img src="images/red.jpg" alt="">
-        <p id="id22" fontSize = "20em">Костел</p>
-    </div>
-    <div id="box3">
-        <img src="images/troi.jpg" alt="">
-        <p id="id32" fontSize = "20em">Троицкое</p>
-    </div>
 
 </section>
 <footer id="foot">
@@ -52,32 +39,47 @@
 </footer>
 
     <script>
-        Obj = {
-            name1: "Мир",
-            pic1: "images/mir.jpg",
-            text1: "Построенный в начале XVI в. магнатом Ю. И. Ильиничем замок стал первым частнособственническим замком на землях Белоруссии",
-            name2: "Костел",
-            pic2: "images/red.jpg",
-            text2: "В храме святого Симеона и святой Елены находится полномасштабная копия Туринской Плащаницы.",
-            name3: "Троицкое",
-            pic3: "images/troi.jpg",
-            text3: "Троицкое предместье — исторический район города Минска, расположенный в северо-восточной части исторического центра на левом берегу реки Свислочь.",
-        }
+    const GLOBAL_OBJ = {
+        Obj1: {
+            name: "Мир",
+            picSrc: "images/mir.jpg",
+            textObj: "Построенный в начале XVI в. магнатом Ю. И. Ильиничем замок стал первым частнособственническим замком на землях Белоруссии",
+        },
 
-function funk1(){
-foot.innerHTML=`<div><img id="p1" src="${Obj.pic1}" alt="" onclick=funk4()><p>${Obj.text1}</p></div>`};  
-function funk2(){
-foot.innerHTML=`<div><img id="p2" src="${Obj.pic2}" alt="" onclick=funk4()><p>${Obj.text2}</p></div>`}; 
-function funk3(){
-foot.innerHTML=`<div><img id="p3" src="${Obj.pic3}" alt="" onclick=funk4()><p>${Obj.text3}</p></div>`}; 
+        Obj2: {
+            name: "Костел",
+            picSrc: "images/red.jpg",
+            textObj: "В храме святого Симеона и святой Елены находится полномасштабная копия Туринской Плащаницы.",
+        },
 
+        Obj3: {
+            name: "Троицкое",
+            picSrc: "images/troi.jpg",
+            textObj: "Троицкое предместье — исторический район города Минска, расположенный в северо-восточной части исторического центра на левом берегу реки Свислочь.",
+        }}
 
-function funk4(){
+let s="";
+
+for(i=1; i<=3; i++){
+    let namObj = `Obj${i}`;
+    s+=`<div id="box${i}"><img src="${GLOBAL_OBJ[namObj]["picSrc"]}"><p>${GLOBAL_OBJ[namObj]["name"]}</p>
+    </div>`
+    box.innerHTML=s;
+    }
+
+    function func1(){
+foot.innerHTML=`<div><img src="${GLOBAL_OBJ.Obj1.picSrc}" onclick=func4()><p>${GLOBAL_OBJ.Obj1.textObj}</p></div>`};  
+function func2(){
+foot.innerHTML=`<div><img src="${GLOBAL_OBJ.Obj2.picSrc}" onclick=func4()><p>${GLOBAL_OBJ.Obj2.textObj}</p></div>`}; 
+function func3(){
+foot.innerHTML=`<div><img src="${GLOBAL_OBJ.Obj3.picSrc}" onclick=func4()><p>${GLOBAL_OBJ.Obj3.textObj}</p></div>`}; 
+
+function func4(){
 foot.innerHTML=`<div></div>`}; 
 
-box1.addEventListener("click", funk1);    
-box2.addEventListener("click", funk2);
-box3.addEventListener("click", funk3);    
+box1.addEventListener("click", func1);    
+box2.addEventListener("click", func2);
+box3.addEventListener("click", func3); 
 
     </script>
 
