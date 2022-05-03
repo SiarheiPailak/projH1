@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <article>
+        <p>Alphabet</p>
+        <section id="s1">    
+        <p> A B C D E F G </p>
+        <p>come on out and play with me.</p>
+        <p>H I J </p>
+        <p>come and play.</p> 
+        <p>K L M </p>
+        <p>come with them. </p>
+        <p>N O P </p>
+        <p>near the tree. </p>
+        <p>Q R S T U V </p>
+        <p>Oh, how happy we will be. </p>
+        <p>W X Y Z </p>
+        <p>Lot's of fun for you and me. </p>
+        </section>
+</article>    
+
+<p id="Alph"></p>
+
+<button onclick="outputAlph()">Вывести алфавит</button>
+
+<button onclick="changeText()">Выделить текст</button>
+
+<script>
+
+function outputAlph(){
+    let alFromP = document.querySelectorAll("section p:nth-child(odd)");
+    let s = "";
+    for (i=0; i<alFromP.length; i++){
+        s += alFromP[i].innerHTML;
+    }
+    Alph.innerHTML = s;
+}
+
+function changeText(){
+    let sec = document.getElementById("s1");
+    let inSec = sec.getElementsByTagName("p");
+    let secondText = "";
+    for(i=0; i<inSec.length; i++){
+        secondText += inSec[i].style.cssText = `
+        border: 1px solid blue;
+        font-family: Arial;
+        color: red;
+        font-size: 12pt;
+        background-color: green;
+        width: 350px;`;
+        
+    }
+}
+
+
+</script>
+
+</body>
+</html>
