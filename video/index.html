@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    
+    <section>
+        <video id="media">
+            <source src="media/solarstone.mp4">
+        </video>
+
+        <nav>
+            <div id="buttons">
+                <input type="button" id="play" value="Воспр.">
+                <input type="button" id="mute" value="Звук">
+            </div>
+
+            <div id="bar">
+                <div id="progress">
+
+                </div>
+            </div>
+
+            <div id="control">
+                <input type="range" id="volume" min="0" max = "1" step=".1" value=".6">
+            </div>
+
+        </nav>
+
+        <div id="icon">
+                   <!-- <span class="material-symbols-outlined">pause_circle
+            </span> -->
+            </div>
+
+    </section>
+    
+    <script src="js/player.js"></script>
+
+</body>
+</html>
